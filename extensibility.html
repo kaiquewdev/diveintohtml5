@@ -109,7 +109,7 @@ table.faketable{border-collapse:collapse}
 
 <p id=person-photo>Next up: the <code>photo</code> property. This is supposed to be a <abbr>URL</abbr>. According to the <a href=#property-values><abbr>HTML5</abbr> microdata data model</a>, the &#8220;value&#8221; of an <code>&lt;img></code> element is its <code>src</code> attribute. Hey look, the <abbr>URL</abbr> of your profile photo is already in an <code>&lt;img src></code> attribute. All you need to do is declare that the <code>&lt;img></code> element is the <code>photo</code> property.
 
-<pre><code>  &lt;p>&lt;img <mark>itemprop="photo"</mark>
+<pre><code>  &lt;p>&lt;img <mark>itemprop="image"</mark>
           src="http://www.example.com/photo.jpg"
           alt="[me smiling]">&lt;/p></code></pre>
 
@@ -215,9 +215,9 @@ table.faketable{border-collapse:collapse}
 <tr class=zebra><td><code>address</code><td>The location of the person. Can have the subproperties <code>street-address</code>, <code>locality</code>, <code>region</code>, <code>postal-code</code>, and <code>country-name</code>.
 </table>
 
-<p>The first thing in <a href=examples/person-plus-microdata.html>this sample &#8220;about&#8221; page</a> is a picture of me. Naturally, it&#8217;s marked up with an <code>&lt;img></code> element. To declare that this <code>&lt;img></code> element is my profile picture, all we need to do is add <code>itemprop="photo"</code> to the <code>&lt;img></code> element.
+<p>The first thing in <a href=examples/person-plus-microdata.html>this sample &#8220;about&#8221; page</a> is a picture of me. Naturally, it&#8217;s marked up with an <code>&lt;img></code> element. To declare that this <code>&lt;img></code> element is my profile picture, all we need to do is add <code>itemprop="image"</code> to the <code>&lt;img></code> element.
 
-<pre><code>  &lt;img <mark>itemprop="photo"</mark> width="204" height="250"
+<pre><code>  &lt;img <mark>itemprop="image"</mark> width="204" height="250"
       src="http://diveintohtml5.org/examples/2000_05_mark.jpg"
       alt="[Mark Pilgrim, circa 2000]"></code></pre>
 
@@ -229,11 +229,11 @@ table.faketable{border-collapse:collapse}
 
 <blockquote>
 <p>This person [explicit, from <code>&lt;section itemscope itemtype="..."></code>]
-<p>is pictured at [explicit, from <code>&lt;img itemprop="photo"></code>]
+<p>is pictured at [explicit, from <code>&lt;img itemprop="image"></code>]
 <p><code>http://diveintohtml5.org/examples/2000_05_mark.jpg</code> [implicit, from <code>&lt;img src></code> attribute]
 </blockquote>
 
-<p>The subject only needs to be defined once, by putting <code>itemscope</code> and <code>itemtype</code> attributes on the outermost <code>&lt;section></code> element. The verb is defined by putting the <code>itemprop="photo"</code> attribute on the <code>&lt;img></code> element. The object of the sentence doesn&#8217;t need any special markup at all, because the <a href=#property-values><abbr>HTML5</abbr> microdata data model</a> says that the property value of an <code>&lt;img></code> element is its <code>src</code> attribute.
+<p>The subject only needs to be defined once, by putting <code>itemscope</code> and <code>itemtype</code> attributes on the outermost <code>&lt;section></code> element. The verb is defined by putting the <code>itemprop="image"</code> attribute on the <code>&lt;img></code> element. The object of the sentence doesn&#8217;t need any special markup at all, because the <a href=#property-values><abbr>HTML5</abbr> microdata data model</a> says that the property value of an <code>&lt;img></code> element is its <code>src</code> attribute.
 
 <p>Moving on to the next bit of markup, we see an <code>&lt;h1></code> header and the beginnings of a <code>&lt;dl></code> list. Neither the <code>&lt;h1></code> nor the <code>&lt;dl></code> need to be marked up with microdata. Not every piece of <abbr>HTML</abbr> needs to be a microdata property. Microdata is about the properties themselves, not the markup or headers surrounding the properties. This <code>&lt;h1></code> isn&#8217;t a property; it&#8217;s just a header. Similarly, the <code>&lt;dt></code> that says &#8220;Name&#8221; isn&#8217;t a property; it&#8217;s just a label.
 
@@ -607,7 +607,7 @@ A: &#8220;<a href="http://www.google.com/support/webmasters/bin/answer.py?hl=en&
 <p>In English, this says, &#8220;The name of this event is Google Developer Day 2009.&#8221;
 <p>This event listing has a photo, which can be marked up with the <code>photo</code> property. As you would expect, the photo is already marked up with an <code>&lt;img></code> element. Like <a href=#person-photo>the <code>photo</code> property in the Person vocabulary</a>, an Event photo is a <abbr>URL</abbr>. Since the <a href=#property-values><abbr>HTML5</abbr> microdata data model</a> says that the property value of an <code>&lt;img></code> element is its <code>src</code> attribute, the only thing we need to do is add the <code>itemprop</code> attribute to the <code>&lt;img></code> element.
 
-<pre><code>  &lt;img <mark>itemprop="photo"</mark> width="300" height="200"
+<pre><code>  &lt;img <mark>itemprop="image"</mark> width="300" height="200"
        src="http://diveintohtml5.org/examples/gdd-2009-prague-pilgrim.jpg"
        alt="[Mark Pilgrim at podium]"></code></pre>
 <p class=follow>[Follow along! Before: <a href=examples/event.html>event.html</a>, after: <a href=examples/event-plus-microdata.html>event-plus-microdata.html</a>]
